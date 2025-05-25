@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Checkbox.Root>
+  <Checkbox.Root class="flex">
     <Checkbox.Label>{{ props.label }}</Checkbox.Label>
     <Checkbox.Control>
       <Checkbox.Indicator> ✓ </Checkbox.Indicator>
@@ -18,7 +18,6 @@ const props = defineProps<{
 
 <style scoped>
 [data-part="root"] {
-  display: flex;
   align-items: center;
   gap: 5px;
   cursor: pointer;
