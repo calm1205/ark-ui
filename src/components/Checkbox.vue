@@ -7,27 +7,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Checkbox.Root class="flex">
+  <Checkbox.Root class="flex items-center gap-2 cursor-pointer">
     <Checkbox.Label>{{ props.label }}</Checkbox.Label>
-    <Checkbox.Control>
+    <Checkbox.Control
+      class="flex items-center justify-center min-w-[15px] h-[15px] border border-black"
+    >
       <Checkbox.Indicator> ✓ </Checkbox.Indicator>
     </Checkbox.Control>
     <Checkbox.HiddenInput />
   </Checkbox.Root>
 </template>
-
-<style scoped>
-[data-part="root"] {
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-}
-[data-part="control"] {
-  min-width: 15px;
-  height: 15px;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>
